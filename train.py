@@ -28,7 +28,7 @@ if __name__ == '__main__':
             visualizer.reset()
             total_steps += opt.batchSize
             epoch_iter += opt.batchSize
-            print(data['A'].shape, data['B'].shape)
+            # print(data['A'].shape, data['B'].shape)
             model.set_input(data)
             model.optimize_parameters()
 

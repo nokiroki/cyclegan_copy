@@ -8,6 +8,7 @@ from . import html
 # from scipy.misc import imresize
 import cv2
 
+
 # save image to the disk
 def save_images(webpage, visuals, image_path, aspect_ratio=1.0, width=256):
     image_dir = webpage.get_image_dir()
@@ -47,8 +48,8 @@ class Visualizer():
         if self.display_id > 0:
             import visdom
             self.ncols = opt.display_ncols
-            self.vis = visdom.Visdom()
-            # self.vis = visdom.Visdom(server=opt.display_server, port=opt.display_port)
+            # self.vis = visdom.Visdom()
+            self.vis = visdom.Visdom(server=opt.display_server, port=opt.display_port)
 
         if self.use_html:
             self.web_dir = os.path.join(opt.checkpoints_dir, opt.name, 'web')
