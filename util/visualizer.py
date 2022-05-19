@@ -49,7 +49,8 @@ class Visualizer():
             import visdom
             self.ncols = opt.display_ncols
             # self.vis = visdom.Visdom()
-            self.vis = visdom.Visdom(server=opt.display_server, port=opt.display_port)
+            # self.vis = visdom.Visdom(server=opt.display_server, port=opt.display_port)
+            self.vis = visdom.Visdom(port=opt.display_port)
 
         if self.use_html:
             self.web_dir = os.path.join(opt.checkpoints_dir, opt.name, 'web')
